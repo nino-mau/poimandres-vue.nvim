@@ -271,9 +271,9 @@ function M.get(config)
     typescriptObjectType = { fg = p.blueGray1 },
 
          -- -----------------------------------------------------------------------
-    -- START: Additions from VS Code Rules for Vue/HTML/JS Specifics
+    -- START: Additions for Vue
     -- -----------------------------------------------------------------------
-    ['@tag.vue'] = { fg = p.blue2 },
+    ['@tag.vue'] = { fg = p.blue2 }, -- Change vue elements color to distingish them from other html element
     -- -----------------------------------------------------------------------
     -- END: Additions
     -- -----------------------------------------------------------------------
