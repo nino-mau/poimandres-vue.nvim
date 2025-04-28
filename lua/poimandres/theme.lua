@@ -273,7 +273,8 @@ function M.get(config)
          -- -----------------------------------------------------------------------
     -- START: Additions for Vue
     -- -----------------------------------------------------------------------
-    ['@tag.vue'] = { fg = p.blue2 }, -- Change vue elements color to distingish them from other html element
+    -- ['@tag.vue'] = { fg = p.blue2 }, -- Change vue elements color to distingish them from other html element
+    ['@string.vue'] = { fg = p.blue2 }, -- Change string color in html element
     -- -----------------------------------------------------------------------
     -- END: Additions
     -- -----------------------------------------------------------------------
