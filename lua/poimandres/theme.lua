@@ -270,6 +270,24 @@ function M.get(config)
     typescriptParenExp = { fg = p.blueGray2 },
     typescriptObjectType = { fg = p.blueGray1 },
 
+         -- -----------------------------------------------------------------------
+    -- START: Additions from VS Code Rules for Vue/HTML/JS Specifics
+    -- -----------------------------------------------------------------------
+    ['@tag'] = { fg = '#ADD7FF' }, -- Rule 1 & 2: HTML/Vue tags (overrides default @tag)
+    ['@variable'] = { fg = '#fffac2' }, -- Rule 4: JS variables (like in v-for) (overrides default @variable)
+    ['@property'] = { fg = '#fffac2' }, -- Rule 5: JS object properties (overrides default @property)
+    ['@type'] = { fg = '#f087bd' }, -- Rule 6: Component names (assuming captured as @type) (overrides default @type)
+    -- If components are captured as @constructor instead:
+    -- ['@constructor'] = { fg = '#f087bd' }, -- Alternative/Additional for Rule 6
+    ['@string'] = { fg = '#FFFFFF' }, -- Rule 7 & 8: Strings in HTML attributes, JS, template strings (overrides default @string)
+    -- Rule 3 (text.html.vue-html -> #FFFFFF): If the default `Normal` or `@text` (p.text) isn't white
+    -- and you *specifically* want Vue template text to be white, you might add:
+    -- ['@text'] = { fg = '#FFFFFF' }, -- Be careful, this affects all Treesitter text nodes.
+    -- Or potentially modify the base `Normal` group if appropriate for the whole theme.
+    -- -----------------------------------------------------------------------
+    -- END: Additions
+    -- -----------------------------------------------------------------------
+
     -- lua
     luaTSConstructor = { fg = p.blueGray1 },
 
